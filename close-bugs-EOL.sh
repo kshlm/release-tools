@@ -19,10 +19,12 @@ check_for_command()
 
 close_bugs()
 {
-	COMMENT="This bug is getting closed because GlusteFS-${VERSION} has reached its end-of-life.
+  COMMENT="This bug is getting closed because GlusterFS-${VERSION} has reached its end-of-life [1].
 
 Note: This bug is being closed using a script. No verification has been performed to check if it still exists on newer releases of GlusterFS.
-If this bug still exists in newer GlusterFS releases, please reopen this bug against the newer release.
+If this bug still exists in newer GlusterFS releases, please open a new bug against the newer release.
+
+[1]: https://www.gluster.org/community/release-schedule/
 "
 
 	xargs -n 8 ${DR} bugzilla modify \
